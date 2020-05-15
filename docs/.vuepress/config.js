@@ -14,11 +14,11 @@ module.exports = {
             md.use(require('markdown-it-katex'))
         }
     },
-     head: [
+    head: [
         ['link', { rel: 'icon', href: '/egg.png' }],  //浏览器的标签栏的网页图标
     ],
     markdown: {
-        lineNumbers: true
+        /*lineNumbers: true*/
     },
     serviceWorker: true,
     themeConfig: {    
