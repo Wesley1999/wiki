@@ -5,24 +5,19 @@ set -e
 
 # 生成静态文件
 cd /root/vuepress/wiki
+git pull
 npm run build
 
-# 进入生成的文件夹
-cd /root/vuepress/wiki/docs/.vuepress/dist
+# 挂载oss
+# ossfs iclass-api-wsg-sz /oss/iclass-api -ourl=oss-cn-shenzhen-internal.aliyuncs.com
+# 准备发布
+rm -rf /oss/wiki/*
+cp -R /root/vuepress/wiki/docs/.vuepress/dist/* /oss/wiki
 
-rm -rf /root/nginx/html/wiki/*
-cp -R * /root/nginx/html/wiki
+# rm -rf /root/nginx/html/wiki/*
+# cp -R /root/vuepress/wiki/docs/.vuepress/dist/* /root/nginx/html/wiki
 
-cd /root/vuepress/wiki
+# 提交到git
 git add .
 git commit -m "commit"
-git pull
 git push
-# git init
-# git add -A
-# git commit -m 'deploy'
-
-# 如果发布到 https://<USERNAME>.github.io
-# git push -f git@github.com:dwanda/dwanda.github.io.git master
-
-cd -
