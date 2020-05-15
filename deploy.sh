@@ -13,6 +13,11 @@ cd /root/vuepress/wiki/docs/.vuepress/dist
 rm -rf /root/nginx/html/wiki/*
 cp -R * /root/nginx/html/wiki
 
+cd /root/vuepress/wiki
+git add .
+git commit -m "commit"
+git pull
+git push
 # git init
 # git add -A
 # git commit -m 'deploy'
