@@ -1,7 +1,5 @@
 # EL与JSTL
 
-[toc]
-
 ## el简介
 EL（Express Lanuage）表达式可以嵌入在jsp页面内部，减少jsp脚本的编写，EL出现的目的是替代jsp页面中脚本的编写，但逻辑代码无法通过el实现。使用el不需要导入jar包。
 ## el从域中取数据

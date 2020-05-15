@@ -1,7 +1,5 @@
 # JSP知识小结
 
-[toc]
-
 ## 简介
 jsp的本质是Servlet。
 Servlet技术相当于在九java代码中嵌入html代码，确定是生成html页面的时候很繁琐。

@@ -1,4 +1,4 @@
-# SpringBoot简介
+# SpringBoot基础
 
 ## SpringBoot简介
 Spring团队开发于2014年，与Spring一同发布。

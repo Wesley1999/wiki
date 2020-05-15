@@ -1,7 +1,5 @@
 # Servlet与ServletContext
 
-[toc]
-
 ## Servlet概念
 Servlet是运行在服务器端的Java小程序，是sun公司提供的一套规范
 Servlet是运行在服务器端的Java小程序，是sun公司提供的一套规范(接口)，用来处理客户端请求、响应给浏览器的动态资源，但Servlet的实质就是Java代码，通过Java的API动态地向客户端输出内容。使用servlet需要导入jar包，tomcat自带。

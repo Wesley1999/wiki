@@ -1,15 +1,13 @@
 # Ajax技术
 
-## Ajax
-
-[toc]
-
-### 概念
+## 概念
 Ajax全称是Asynchronous JavaScript and XML，异步JavaScript 与XML技术。使用ajax技术，页面发起请求，会将请求发送给浏览器内核中的Ajax引擎，Ajax引擎会提交请求到服务器端，在这段时间里，客户端可以任意进行任意操作，直到服务器端将数据返回。如果不用ajax技术，客户端发送请求到服务器端，当服务器返回响应之前，客户端都处于等待，不能进行其他操作。
 
-### JavaScript的原生Ajax技术
-#### 步骤
-##### 创建Ajax引擎对象
+JavaScript的原生Ajax技术
+
+## 步骤
+### 创建Ajax引擎对象
+
 对于绝大多数浏览器，是：
 ```javascript
 var xmlhttp = new XMLHttpRequest();
@@ -19,7 +17,7 @@ IE5、IE6与其他浏览器创建Ajax引擎对象的方式不同，是：
 variable=new ActiveXObject("Microsoft.XMLHTTP");
 ```
 现在的开发一般不考虑IE5和IE6的特殊情况。我最初学JavaEE的教材，却是以IE5、IE6为主讲解的，坑死人。
-#### 为Ajax引擎对象绑定监听
+### 为Ajax引擎对象绑定监听
 ```javascript
 xmlhttp.onreadystatechange = function () {
 	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -37,13 +35,13 @@ xmlhttp.onreadystatechange = function () {
 |3|请求处理中|
 |4|请求已完成，且响应已就绪|
 
-##### 绑定提交地址
+### 绑定提交地址
 ```javascript
 xmlhttp.open("GET","${pageContext.request.contextPath}/ajax",true);
 ```
 第一个参数是请求方式，第二个参数是请求提交地址，第三个参数true表示异步请求，false表示同步请求。
 如果请求方式是get，参数应该放在第二个参数中，如果请求方式是post，参数应该放在发送请求的参数中。
-#### 发送请求
+### 发送请求
 如果是post请求，在发送请求前要设置一个头：
 ```javascript
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
@@ -53,13 +51,13 @@ xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xmlhttp.send();
 ```
 参数是post请求表单提交的参数。
-#### 接受响应数据
+### 接受响应数据
 接受响应数据代码要写在监听监听器触发的事件中，并且当readyState为4，状态码为200时执行，例如：
 ```javascript
 var res = xmlhttp.responseText;
 document.getElementById("span1").innerHTML=res;
 ```
-#### 示例
+### 示例
 ```JavaScript
 function clk1() {
 	// 1.创建引擎对象
@@ -78,8 +76,8 @@ function clk1() {
 	xmlhttp.send();
 }
 ```
-### 基于jQuery的Ajax技术
-#### $.get()方法
+## 基于jQuery的Ajax技术
+### $.get()方法
 `$.get(url, [data], [callback], [type])`方法有四个参数，第一个必需，后三个可选。
 第一个参数是待载入页面的URL地址，就是要用Ajax把请求提交到的地址。
 第二个参数是要提交的请求附带的参数，以键值对的形式书写，即json数据格式。
@@ -102,7 +100,7 @@ function clk1() {
 </script>
 ```
 
-#### $.post()方法与编码问题
+### $.post()方法与编码问题
 如果请求提交的参数是英文，那么$.post()与$.get()方法在实际应用中几乎没有区别。如果提交的参数包含中文，会有这样的现象：
 
 	①. 请求和响应均不做任何处理时，post请求在控制台输出不乱码，在页面输出乱码；get请求在控制台输出乱码，在页面输出不乱码。
@@ -111,7 +109,7 @@ function clk1() {
 	④. 仅将get请求用ios8859-1解码再用UTF-8编码，将get请求和post请求的响应均设置为UTF-8编码时，所有的输出都不乱码。
 以上现象出现的原因是jQuery的$.get()方法内部没有将请求处理为UTF-8编码，须要用常规的方式处理乱码问题。而$.post()方法内部已经将请求处理为UTF-8编码了，所以只需要把响应设置为UTF-8编码，自作多情地去对请求编码再解码反而会出现问题。
 	
-#### $.ajax()方法（常用）
+### $.ajax()方法（常用）
 $.ajax( { option1:value1,option2:value2... } )方法比前两个有更丰富的功能，参数以键值对的形式出现。
 常用的option有如下：
 
