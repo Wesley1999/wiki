@@ -10,15 +10,9 @@
 持续更新中。。。
 <br>
 
-<div style='display:none'>
-基础知识--笔记
-代码库--用于复制粘贴
-教程--解决已知的问题
-经验--解决未知的问题
-</div>
 <br>
 
-<img src=https://oss-pic.wangshaogang.com/1586691188494-a43c1772-3a65-4132-85b3-ced6746c30e9.png style='margin-right:10px; width: 22px'>https://www.wangshaogang.com<br>
+<img src=https://oss-pic.wangshaogang.com/1586691188494-a43c1772-3a65-4132-85b3-ced6746c30e9.png style='margin-right:10px; width: 22px'><a href='https://www.wangshaogang.com' target="1" rel="noopener noreferrer">https://www.wangshaogang.com</a>
 
 <img src=https://oss-pic.wangshaogang.com/1586857333932-3086efcb-0ddc-4e72-ba34-e4cd99fcfb0d.png style='margin-right:10px; width: 22px'><a href='https://github.com/Wesley1999' target="1" rel="noopener noreferrer">https://github.com/Wesley1999</a>
 
