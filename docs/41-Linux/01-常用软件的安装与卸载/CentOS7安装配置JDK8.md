@@ -1,5 +1,15 @@
 # CentOS7安装配置JDK8
 
+## 脚本安装
+
+使用此脚本，可直接完成jdk-8u231的安装。
+
+```shell
+curl -s https://oss-file.wangshaogang.com/Develop/Linux/script/jdk.sh | bash
+```
+
+下面的步骤都可以跳过了。
+
 ## 下载
 
 ```shell
