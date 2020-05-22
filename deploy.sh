@@ -14,5 +14,6 @@ cp -R /root/vuepress/wiki/docs/.vuepress/dist/* /root/nginx/html/wiki
 
 # 提交到git
 git add .
-git commit -m "commit"
+now_time=`date '+%F %T'`
+git commit -m "Windows commit on ${now_time}"
 git push
