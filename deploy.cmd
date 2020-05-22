@@ -3,6 +3,6 @@ git add .
 git commit -m "Windows commit on %date% %time%"
 git pull
 git push
-echo '鍙戝竷璇锋眰宸叉彁浜ゅ埌鏈嶅姟鍣紝鍙戝竷鎴愬姛鍚庯紝鏈獥鍙ｅ皢鑷姩鍏抽棴'
+echo '发布请求已提交到服务器，发布成功后，本窗口将自动关闭'
 curl http://120.76.62.52:3000/wiki/deploy
 exit
