@@ -5,5 +5,4 @@ git commit -m "Windows commit on %date% %time%"
 git pull
 git push
 curl http://120.76.62.52:3000/wiki/deploy
-mshta vbscript:msgbox("发布成功",6,"提示")(window.close)
 exit
