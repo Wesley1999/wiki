@@ -9,8 +9,8 @@ git pull
 npm run build
 
 # 发布
-rm -rf /root/nginx/html/wiki/*
-cp -R /root/vuepress/wiki/docs/.vuepress/dist/* /root/nginx/html/wiki
+rm -rf /root/nginx/html/wiki202005/*
+cp -R /root/vuepress/wiki/docs/.vuepress/dist/* /root/nginx/html/wiki202005
 
 # 提交到git
 git add .

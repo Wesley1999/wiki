@@ -2,7 +2,7 @@
 home: true
 heroImage: /egg.png
 heroText: 王少刚的Wiki
-tagline: 本网站正在开发中
+tagline: 请移步<a href="https://wiki.wangshaogang.com">https://wiki.wangshaogang.com</a>
 actionText: 马上进入 →
 actionLink: /Welcome.md
 features:
